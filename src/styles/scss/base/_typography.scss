@@ -1,0 +1,63 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue";
+    font-size: 1.6rem;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+.subtitle {
+    font-size: 3.2rem;
+    line-height: 1.63;
+    font-weight: 800;
+}
+
+.menu__title {
+    display: inline-block;
+    &-head {
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;  
+        line-height: 0.75;
+        letter-spacing: normal;
+    }
+    &-subhead {
+        display: block;
+        font-size: 1.2rem;
+        color: #3131318b;
+    }
+}
+
+.mobileMenu {
+    &__list {
+        font-size: 6.4rem;
+    }
+}
+
+.homeContent {
+    &__main-title {
+        letter-spacing: 1.2px;
+        font-size: 4.8rem;
+    }
+
+    &__main-subtitle {
+        line-height: 1.63;
+        font-weight: 800;
+    }
+
+    &__main-body {
+        font-weight: 100;    
+    }
+
+    &__contact  {
+        font-size: 3.2rem;
+        font-weight: 500;
+    }
+}
+
+li a {
+    text-decoration: none;
+}
+

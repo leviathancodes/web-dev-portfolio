@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.801" height="38" viewBox="0 0 41.801 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #fd5f2b;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="41.8" height="38"/>
+    </clipPath>
+  </defs>
+  <g id="bars-solid" class="cls-2" transform="translate(0.001)">
+    <path id="bars-solid-2" data-name="bars-solid" class="cls-3" d="M1.493,66.98H40.307A1.523,1.523,0,0,0,41.8,65.429V61.551A1.523,1.523,0,0,0,40.307,60H1.493A1.523,1.523,0,0,0,0,61.551v3.878A1.523,1.523,0,0,0,1.493,66.98Zm0,15.51H40.307A1.523,1.523,0,0,0,41.8,80.939V77.061a1.523,1.523,0,0,0-1.493-1.551H1.493A1.523,1.523,0,0,0,0,77.061v3.878A1.523,1.523,0,0,0,1.493,82.49Zm0,15.51H40.307A1.523,1.523,0,0,0,41.8,96.449V92.571a1.523,1.523,0,0,0-1.493-1.551H1.493A1.523,1.523,0,0,0,0,92.571v3.878A1.523,1.523,0,0,0,1.493,98Z" transform="translate(0 -60)"/>
+  </g>
+</svg>

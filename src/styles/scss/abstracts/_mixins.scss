@@ -1,0 +1,75 @@
+@mixin reset-buttons {
+        background: none;
+        border: 0;
+        color: inherit;
+        outline: none;
+        /* cursor: default; */
+        line-height: normal;
+        overflow: visible;
+        padding: 0;
+        -webkit-appearance: button; /* for input */
+        -webkit-user-select: none; /* for button */
+           -moz-user-select: none;
+            -ms-user-select: none;
+}
+
+@mixin button-styling($text-color, $background-color, $shadow-color) {
+        display: flex;
+        font-size: 3.2rem;
+        position: relative;
+        color: $text-color;
+        background-color: $background-color;
+        width: auto;
+        height: auto;
+        padding: 2rem;
+        cursor: pointer;
+        justify-content: center;
+        &:hover {
+                transform: scale(1.1);
+                transform: translateY(-0.3rem);
+            }
+    
+            &:active {
+                transform: translateY(-0.1rem);
+            }
+    
+            &::after {
+                content: "";
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transform: translate(15px, 4px);
+                background-color: $shadow-color;
+                z-index: -1;
+            }
+    
+            &:hover::after {
+                transition: all 0.4s ease-out;  
+                opacity: 1;
+            }
+
+            @media screen and (max-height: 700px) {
+                &::after  {
+                    transform: translate(2rem, 1.5rem);
+                }
+            }
+
+            @media screen and (max-width: 1000px) {
+                &::after  {
+                    transform: translate(2rem, 1.5rem);
+                }
+            }
+}
+
+@mixin background-properties() {
+        background-image: linear-gradient(
+        rgba(49, 49, 49, 0.82), 
+        rgba(49, 49, 49, 0.82)
+        ); 
+        background-repeat: no-repeat;  
+        background-attachment: local;
+        background-size: 100% 100%;
+        max-width:100%;
+        max-height:100%;
+}

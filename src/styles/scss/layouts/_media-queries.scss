@@ -1,0 +1,88 @@
+@media screen and (max-height: 700px) {
+    html {
+        font-size: 50%;
+    }
+
+    .homeContent {
+        height: auto;
+    }
+
+    .aboutContent {
+        height: auto;
+    }
+
+
+    .aboutPortfolio {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .aboutContent__info {
+        margin-top: 3rem;
+    }
+    
+    .homeContent__contact {
+        margin-bottom: 3.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .homeContent {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+        background-position: top;
+        &__main-title, &__main-subtitle, &__main-body, &__contact {
+           margin-left: 0rem;
+       }
+   
+       &__main {
+           text-align: center;
+           width: 100%;
+           &-title {
+               margin-bottom: 5rem;
+           }
+           &-body {
+               width: auto;
+           }
+       }
+
+       &__contact {
+        justify-content: center;
+        align-items: center;              
+           margin: auto;
+           margin-bottom: 6rem;
+           padding: auto;
+       }
+       
+        &__main-title, &__main-subtitle, &__main-body {
+
+           padding-left: 5rem;
+           padding-right: 5rem;
+        }
+    }
+
+    .homeContent {
+        height: auto;
+    }
+
+    .aboutContent {
+        height: auto;
+    }
+
+
+    .aboutPortfolio {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    //   Not a lot of space in this block  on 850px width or lower.
+      .aboutPortfolio__development-text {
+          font-size: 1.8em;
+      }
+  }
