@@ -9,16 +9,31 @@
         align-items: center;
         justify-content: center;
         font-size: 3.2rem;
+
     }
 
     &__development {
         background: $color-primary;
+        position: relative;
         color: white;
+        transition: background 1s;
+        z-index: 0;
+        cursor: pointer;
+        text-decoration: none;
+        @include sliding-hover($color-grey-dark, #ffffff, 0 50%);
+
+
     }
 
     &__design {
         background: white;
+        position: relative;
+        transition: background 1s;
+        z-index: 0;
+        cursor: pointer;
         color: $color-grey-dark;
+        text-decoration: none;
+        @include sliding-hover(#ffffff, $color-primary, 50% 0);
     }
 }
 

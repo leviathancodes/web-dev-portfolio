@@ -1,17 +1,19 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
-const About = props => {
+const About = () => {
+
     return (
         <div className="about" id="about">
             <div className="aboutContent">
                 <div className="aboutPortfolio">
-                    <div className="aboutPortfolio__development">
-                        <h1 className="aboutPortfolio__development-text">Development</h1>
-                    </div>
+                    <Link className="aboutPortfolio__development" exact to='/projects'>
+                            <h1 className="aboutPortfolio__development-text">Development</h1>
+                    </Link>
 
-                    <div className="aboutPortfolio__design">
+                    <Link className="aboutPortfolio__design" exact to='/projects'>
                         <h1 className="aboutPortfolio__design-text">Design</h1>
-                    </div>
+                    </Link>
                 </div>
                 <div className="aboutContent__info">
                     <div className="aboutContent__bio">
@@ -21,6 +23,7 @@ const About = props => {
                         knowledge than ever.  Now I am at a place where that knowledge and expertise can be shared with you.
                         </p>
                     </div>
+
                     <div className="aboutContent__services">
                         <h2 className="subtitle aboutContent__services-subtitle aboutContent__services-subtitle-2">Services</h2>
                         <h4 className="aboutContent__services-bodyIntro">Web Design</h4>
