@@ -8,7 +8,11 @@ import { ReactComponent as GitHubIcon } from '../img/github-social.svg'
 import { ReactComponent as TwitterIcon } from '../img/twitter-social.svg'
 // Components
 import Home from '../pages/Home'
+import Projects from '../components/ProjectList'
+import Project from '../components/Project'
 import Error404 from '../pages/404'
+// Utils
+import projectData from "../utils/projectData"
 
 const Navigation = props => {
 
@@ -50,11 +54,11 @@ const Navigation = props => {
 
                 <Switch>
                     <Route path="/" exact component={Home} />
+                    <Route path="/projects" exact component={Project} />
                     <Route component={Error404}></Route>
                 </Switch>
 
             </Router>
-
         )
     }
 
@@ -93,7 +97,15 @@ const Navigation = props => {
             </nav>
 
             <Switch>
+
                 <Route path="/" exact component={Home} />
+                <Route path="/projects" exact component={Projects} />
+                {projectData.map((project) => {
+                    const name = project.name.toLowerCase().replace(/\s/g, "-")
+                    return ( 
+                        <Route key={`/projects/${name}`} path={`/projects/${name}`} render={()=> <Project name={project.name} />}/>
+                    )
+                })}               
                 <Route component={Error404}></Route>
             </Switch>
         </Router>

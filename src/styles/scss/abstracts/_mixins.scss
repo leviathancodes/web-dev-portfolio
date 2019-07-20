@@ -96,3 +96,28 @@
     }
 
 }
+
+@mixin project-hover($color, $background-color, $transform-origin) {
+    &:hover {
+        color: $color;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index:-1;
+        background: $background-color;
+        transform-origin: $transform-origin;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform .3s ease-out;
+    }
+
+      &:hover::before{
+          transform:scaleX(1);  
+    }
+
+}

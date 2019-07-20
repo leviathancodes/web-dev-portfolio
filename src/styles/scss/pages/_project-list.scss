@@ -1,0 +1,39 @@
+.projectList {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        text-decoration: none;
+        width: 100vw;
+        height: 25vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        text-align: center;
+
+       
+        &-orange {
+            background-color: $color-primary;
+            color: #ffffff;
+            transition: background 1s;
+            z-index: 0;
+            cursor: pointer;
+            position: relative;
+            @include project-hover(#ffffff, $color-secondary, -140% 100%);
+
+        }
+
+        &-white {
+            background-color: #ffffff;
+            color: $color-grey-dark;
+            transition: background 1s;
+            z-index: 0;
+            cursor: pointer;
+            position: relative;
+            @include project-hover(#ffffff, $color-secondary, -140% 100%);
+        }
+
+
+    }
+
+  
+}

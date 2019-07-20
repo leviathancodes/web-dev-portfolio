@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const getImages = (folder) => {
     const directoryPath = path.join(__dirname, `../../public/img/${folder}`)
-
+    const imgPaths = []
     fs.readdir(directoryPath, (err, files) => {
 
         if (err) {
@@ -11,9 +11,9 @@ const getImages = (folder) => {
         }
 
         files.forEach((file) => {
-            console.log(file)
+            imgPaths.push(`img/${folder}/${file}`)
         })
     })
+    return imgPaths
 }
-
-getImages('chatter')
+module.exports = getImages
