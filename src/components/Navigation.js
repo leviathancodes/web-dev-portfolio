@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, Fragment } from "react"
 import MediaQuery from 'react-responsive'
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
+import { createBrowserHistory } from "history";
 // SVGS
 import { ReactComponent as FreeCodeCampIcon } from '../img/free-code-camp-social.svg'
 import { ReactComponent as CodePenIcon } from '../img/codepen-social.svg'
@@ -12,6 +13,7 @@ import Projects from '../components/ProjectList'
 import Project from '../components/Project'
 import Contact from '../pages/Contact'
 import Error404 from '../pages/404'
+import ScrollToTop from '../components/ScrollToTop'
 // Utils
 import projectData from "../utils/projectData"
 
@@ -41,6 +43,7 @@ const Navigation = props => {
     if (hamburgerMenu === true) {
         return (
             <Router>
+            <ScrollToTop>
                 <div className="mobileMenu">
                     <nav>
                         <img className="mobileMenu__exit" src={require('../img/exit-icon.svg')} alt="Exit ixon" onClick={handleHamburgerState}></img>
@@ -58,7 +61,7 @@ const Navigation = props => {
                     <Route path="/contact" exact component={Contact} />
                     <Route component={Error404}></Route>
                 </Switch>
-
+            </ScrollToTop>
             </Router>
         )
     }
@@ -66,6 +69,7 @@ const Navigation = props => {
 
     return (
         <Router>
+            <ScrollToTop>
             <nav className="menu">
                 <div className="menu__left">
                 <NavLink to="/"><img className="menu__icon" src={require("../img/lance-icon.png")} alt="Lance Huddleston II"></img></NavLink>
@@ -97,7 +101,6 @@ const Navigation = props => {
             </nav>
 
             <Switch>
-
                 <Route path="/" exact component={Home} />
                 <Route path="/projects" exact component={Projects} />
                 {projectData.map((project) => {
@@ -109,6 +112,7 @@ const Navigation = props => {
                 <Route path="/contact" component={Contact}/>               
                 <Route component={Error404}></Route>
             </Switch>
+            </ScrollToTop>
         </Router>
        
     )
