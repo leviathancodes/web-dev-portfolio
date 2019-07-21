@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 import MediaQuery from 'react-responsive'
 
 const Landing = () => {
@@ -13,7 +14,7 @@ const Landing = () => {
                     and applications to help bring more traffic and views to your business.  Click the button below to 
                     contact me or keep scrolling to learn more.
                     </p>
-                    <button className="homeContent__contact">Contact Me</button>
+                    <Link to="/contact" className="homeContent__contact">Contact Me</Link>
                 </div>
                 <MediaQuery minWidth={1000}>
                     <img alt="Calm, zen workspace built for productivity" class="homeContent__img"src={require('../img/home-page.jpg')}></img>                

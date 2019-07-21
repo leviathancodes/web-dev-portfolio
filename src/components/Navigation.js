@@ -47,7 +47,6 @@ const Navigation = props => {
                         <ul className="mobileMenu__list">
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/'>Home</NavLink></li>
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/projects'>Projects</NavLink></li>
-                            <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/resume'>Resume</NavLink></li>
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/contact'>Contact</NavLink></li>
                         </ul>
                     </nav>
@@ -56,6 +55,7 @@ const Navigation = props => {
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/projects" exact component={Project} />
+                    <Route path="/contact" exact component={Contact} />
                     <Route component={Error404}></Route>
                 </Switch>
 

@@ -41,8 +41,8 @@
     }
 
     &__contact {
-        @include reset-buttons;
         @include button-styling(#ffffff, $color-primary, $color-primary-light);
+        width: 25rem;
     }
 }
 
