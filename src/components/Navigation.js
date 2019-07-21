@@ -10,6 +10,7 @@ import { ReactComponent as TwitterIcon } from '../img/twitter-social.svg'
 import Home from '../pages/Home'
 import Projects from '../components/ProjectList'
 import Project from '../components/Project'
+import Contact from '../pages/Contact'
 import Error404 from '../pages/404'
 // Utils
 import projectData from "../utils/projectData"
@@ -76,7 +77,6 @@ const Navigation = props => {
                         <ul className="menu__list">
                             <li className="menu__list-item menu__list-about"><NavLink activeClassName="menu__link-selected" exact to='/' className="menu__link">Home</NavLink></li>
                             <li className="menu__list-item menu__list-projects"><NavLink activeClassName="menu__link-selected" exact to='/projects' className="menu__link">Projects</NavLink></li>
-                            <li className="menu__list-item menu__list-resume"><NavLink activeClassName="menu__link-selected" exact to='/resume' className="menu__link">Resume</NavLink></li>
                             <li className="menu__list-item menu__list-contact"><NavLink activeClassName="menu__link-selected" exact to='/contact' className="menu__link">Contact</NavLink></li>
                         </ul>           
                     </MediaQuery>
@@ -105,7 +105,8 @@ const Navigation = props => {
                     return ( 
                         <Route key={`/projects/${name}`} path={`/projects/${name}`} render={()=> <Project name={project.name} />}/>
                     )
-                })}               
+                })}
+                <Route path="/contact" component={Contact}/>               
                 <Route component={Error404}></Route>
             </Switch>
         </Router>

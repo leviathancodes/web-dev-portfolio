@@ -13,14 +13,7 @@ const projectData = [
         liveLink: 'https://lhuddlesto-chatter.herokuapp.com/'
 
     },
-    {
-        name: 'Jamari Campbell Portfolio Site',
-        summary: 'Jamari Campbell is a photographer and videographer based in Michigan. I provided a mobile responsive design for his photography and videography business.  It features a flexible gallery page with modals opening up to view the entire image.  My involvement in this project included wire framing, design and light project planning.',
-        date: 'March 2019 - March 2019',
-        skills: {
-            'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
-        }
-    },
+
     {
         name: 'Weather App',
         summary: 'Weather app is a web application that makes calls to the DarkSky API and the MapBox API in order to generate accurate weather data based on the location you provide.  The application utilizes asynchronous programming in order to get the job done.',
@@ -43,7 +36,6 @@ const projectData = [
             'Quality Assurance & Testing': ['Jest', 'Manual Testing']
         },
         codeLink: 'https://github.com/lhuddlesto/task-manager-api/',
-        liveLink: ''
     },
     {
         name: 'Modern Drum Machine',
@@ -54,7 +46,9 @@ const projectData = [
             'Front-End Development': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
-        }
+        },
+        codeLink: 'https://github.com/lhuddlesto/react-drum-machine',
+        liveLink: 'https://react-app-drum-machine.herokuapp.com/'
     },
     {
         name: 'Anime Quote Machine',
@@ -65,7 +59,9 @@ const projectData = [
             'Front-End Development:': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
-        }
+        },
+        codeLink: 'https://github.com/lhuddlesto/anime-quote-machine',
+        liveLink: 'https://anime-quote-generator.herokuapp.com/'
     },
     {
         name: 'React Calculator',
@@ -76,7 +72,9 @@ const projectData = [
             'Front-End Development': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
-        }
+        },
+        codeLink: 'https://github.com/lhuddlesto/react-calculator',
+        liveLink: 'https://react-calculator-application.herokuapp.com/'
     }
 ]
 

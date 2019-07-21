@@ -9,8 +9,8 @@
         padding: 0;
         -webkit-appearance: button; /* for input */
         -webkit-user-select: none; /* for button */
-           -moz-user-select: none;
-            -ms-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
 }
 
 @mixin button-styling($text-color, $background-color, $shadow-color) {
