@@ -1,7 +1,6 @@
-import React, { useState, useEffect, Fragment } from "react"
+import React, { useState } from "react"
 import MediaQuery from 'react-responsive'
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
-import { createBrowserHistory } from "history";
 // SVGS
 import { ReactComponent as FreeCodeCampIcon } from '../img/free-code-camp-social.svg'
 import { ReactComponent as CodePenIcon } from '../img/codepen-social.svg'
@@ -17,7 +16,7 @@ import ScrollToTop from '../components/ScrollToTop'
 // Utils
 import projectData from "../utils/projectData"
 
-const Navigation = props => {
+const Navigation = () => {
 
     const links = {
         freeCodeCamp: 'https://www.freecodecamp.org/nomadfox',
@@ -49,7 +48,7 @@ const Navigation = props => {
                         <img className="mobileMenu__exit" src={require('../img/exit-icon.svg')} alt="Exit ixon" onClick={handleHamburgerState}></img>
                         <ul className="mobileMenu__list">
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/'>Home</NavLink></li>
-                            <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/projects'>Projects</NavLink></li>
+                            <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" to='/projects'>Projects</NavLink></li>
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/contact'>Contact</NavLink></li>
                         </ul>
                     </nav>
@@ -57,7 +56,13 @@ const Navigation = props => {
 
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/projects" exact component={Project} />
+                    <Route path="/projects" exact component={Projects} />
+                    {projectData.map((project) => {
+                        const name = project.name.toLowerCase().replace(/\s/g, "-")
+                        return ( 
+                            <Route key={`/projects/${name}`} path={`/projects/${name}`} render={()=> <Project name={project.name} />}/>
+                        )
+                    })}
                     <Route path="/contact" exact component={Contact} />
                     <Route component={Error404}></Route>
                 </Switch>

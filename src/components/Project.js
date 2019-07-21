@@ -6,11 +6,9 @@ import projectData from "../utils/projectData"
 const Project  = props => {
 
     const project = projectData.find((project) => project.name === props.name)
-    const name = project.name.toLowerCase().replace(/\s/g, "-")
 
     const [projectPage, setProjectPage] = useState("info")
     const [pages, setPages] = useState([])
-    const [active, setActive] = useState(false)
 
     // Component Mounting
     useEffect(() => {

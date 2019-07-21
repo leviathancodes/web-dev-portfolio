@@ -1,6 +1,6 @@
 import React from "react"
 
-const Error404 = props => {
+const Error404 = () => {
     return (
     <div className="wrapper">
         <div className="error404">
