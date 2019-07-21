@@ -34,7 +34,7 @@ const Project  = props => {
                     return <ul key={`project__skills-${skillType}`} className="project__skills-list">
                         <li className="project__skills-subhead"><b>{skillType}</b></li>
                             {
-                                skillList.map((skill, index) =>  <li key={`project__skils-${skill}`} className="project__skills-item">{skill}</li>)
+                                skillList.map((skill) =>  <li key={`project__skils-${skill}`} className="project__skills-item">{skill}</li>)
                             }
                         </ul>
                     })     
