@@ -36,11 +36,11 @@ const About = () => {
                         <div className="skills">
                             <ul className="skills__frontEnd">
                                 <li className="skills__frontEnd-title"><b>Front-End Development</b></li>
-                                <li className="skills__frontEnd-item">HTML5</li>
-                                <li className="skills__frontEnd-item">CSS3 (Sass)</li>
-                                <li className="skills__frontEnd-item">Bootstrap</li>
                                 <li className="skills__frontEnd-item">React</li>
                                 <li className="skills__frontEnd-item">JavaScript (ES6)</li>
+                                <li className="skills__frontEnd-item">Bootstrap</li>
+                                <li className="skills__frontEnd-item">HTML5</li>
+                                <li className="skills__frontEnd-item">CSS3 (Sass)</li>
                                 <li className="skills__frontEnd-item">Wix</li>
                             </ul>
                             <ul className="skills__backEnd">

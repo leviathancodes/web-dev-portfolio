@@ -5,8 +5,8 @@ const projectData = [
         date: 'July 2019 - July 2019',
         images: 4,
         skills: {
-            'Front-End Development': ['HTML5', 'CSS3', 'Handlebars', 'JavaScript (ES6)'],
-            'Back-End Development': ['Node.js', 'Express', 'Socket.io'],
+            'Front-End Development': ['JavaScript (ES6)', 'Handlebars', 'HTML5', 'CSS3'],
+            'Back-End Development': ['Socket.io', 'Node.js', 'Express'],
             'Quality Assurance & Testing': ['Manual Testing']
         },
         codeLink: 'https://github.com/lhuddlesto/chatter',
@@ -20,8 +20,8 @@ const projectData = [
         date: 'May 2019 - June 2019',
         images: 2,
         skills: {
-            'Front-End Development': ['HTML5', 'CSS3', 'Handlebars', 'JavaScript (ES6)'],
-            'Back-End Development': ['Node.js', 'Express', 'Socket.io'],
+            'Front-End Development': ['Handlebars', 'JavaScript (ES6)', 'HTML5', 'CSS3'],
+            'Back-End Development': ['Node.js', 'Express'],
             'Quality Assurance & Testing': ['Manual Testing']
         },
         codeLink: 'https://github.com/lhuddlesto/node-weather-site',
@@ -32,7 +32,7 @@ const projectData = [
         summary: 'The Task Manager API is an API that handles creating, retrieving, updating and deleting tasks.  User data and task data are stored in a MongoDB Database, and it uses bcrypt to hash user passwords, along with JSON Web Tokens to handle authentication.  The application was unit tested with Jest in order to guarentee reliable functionality.',
         date: 'June 2019 - July 2019',
         skills: {
-            'Back-End Development': ['Node.js', 'Express', 'MongoDB', 'Mongoose'],
+            'Back-End Development': ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWTs'],
             'Quality Assurance & Testing': ['Jest', 'Manual Testing']
         },
         codeLink: 'https://github.com/lhuddlesto/task-manager-api/',
@@ -43,7 +43,7 @@ const projectData = [
         date: 'December 2018 - January 2019',
         images: 2,
         skills: {
-            'Front-End Development': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
+            'Front-End Development': ['React', 'JavaScript (ES6)', 'CSS3 (Sass)', 'HTML5',],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
         },
@@ -56,7 +56,7 @@ const projectData = [
         date: 'January 2019 - January 2019',
         images: 3,
         skills: {
-            'Front-End Development:': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
+            'Front-End Development:': ['React', 'JavaScript (ES6)', 'CSS3 (Sass)', 'HTML5'],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
         },
@@ -69,7 +69,7 @@ const projectData = [
         date: 'February 2019 - March 2019',
         images: 3,
         skills: {
-            'Front-End Development': ['HTML5', 'CSS3 (Sass)', 'JavaScript (ES6)', 'React'],
+            'Front-End Development': ['React', 'JavaScript (ES6)', 'CSS3 (Sass)', 'HTML5'],
             'Design': ['Wireframing', 'Responsive Web Design', 'Adobe XD'],
             'Quality Assurance & Testing': ['Manual Testing']
         },

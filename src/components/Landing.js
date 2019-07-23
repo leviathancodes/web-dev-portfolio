@@ -16,7 +16,7 @@ const Landing = () => {
                     </p>
                     <Link to="/contact" className="homeContent__contact">Contact Me</Link>
                 </div>
-                <MediaQuery minWidth={1000}>
+                <MediaQuery minWidth={1001}>
                     <img alt="Calm, zen workspace built for productivity" class="homeContent__img"src={require('../img/home-page.jpg')}></img>                
                 </MediaQuery>
                 

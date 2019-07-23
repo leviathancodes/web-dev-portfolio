@@ -17,7 +17,7 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
 
     .aboutContent__info {
         margin-top: 3rem;
@@ -29,6 +29,8 @@
 }
 
 @media screen and (max-width: 1000px) {
+
+
     .homeContent {
         height: 100vh;
         display: flex;
@@ -80,9 +82,31 @@
     }
 }
 
+@media screen and (max-width: 999px) {
+    ul.menu__social {
+        display: none;
+    }
+
+    .homeContent__img {
+        display: none;
+        width: 1%;
+    }
+
+    .homeContent__img {
+        display: none;
+        width: 1%;
+    }
+} 
+
 @media screen and (max-width: 850px) {
     //   Not a lot of space in this block  on 850px width or lower.
       .aboutPortfolio__development-text {
           font-size: 1.8em;
       }
+  }
+
+  @media screen and (max-width: 350px) {
+    .aboutContent__info {
+        margin: 2rem;
+    }
   }
