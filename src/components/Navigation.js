@@ -39,6 +39,11 @@ const Navigation = () => {
         document.body.style.overflow = "visible"
     }
 
+    const handleResume = () => {
+        console.log('clicked')
+        fetch('https://lhuddlesto-api.herokuapp.com')
+    }
+
     if (hamburgerMenu === true) {
         return (
             <Router>
@@ -49,6 +54,7 @@ const Navigation = () => {
                         <ul className="mobileMenu__list">
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/'>Home</NavLink></li>
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" to='/projects'>Projects</NavLink></li>
+                            <li className="mobileMenu__list-item"><a className="mobileMenu__link" href="https://lhuddlesto-api.herokuapp.com">Resume</a></li>
                             <li className="mobileMenu__list-item" onClick={handleHamburgerState}><NavLink className="mobileMenu__link" exact to='/contact'>Contact</NavLink></li>
                         </ul>
                     </nav>
@@ -71,7 +77,6 @@ const Navigation = () => {
         )
     }
 
-
     return (
         <Router>
             <ScrollToTop>
@@ -85,6 +90,7 @@ const Navigation = () => {
                     <MediaQuery minWidth={1000}>
                         <ul className="menu__list">
                             <li className="menu__list-item menu__list-about"><NavLink activeClassName="menu__link-selected" exact to='/' className="menu__link">Home</NavLink></li>
+                            <li className="menu__list-item menu__list-resume"><a className="menu__link" href="https://lhuddlesto-api.herokuapp.com">Resume</a></li>
                             <li className="menu__list-item menu__list-projects"><NavLink activeClassName="menu__link-selected" exact to='/projects' className="menu__link">Projects</NavLink></li>
                             <li className="menu__list-item menu__list-contact"><NavLink activeClassName="menu__link-selected" exact to='/contact' className="menu__link">Contact</NavLink></li>
                         </ul>           
