@@ -7,7 +7,6 @@ import { ReactComponent as GitHubIcon } from '../img/github-social.svg'
 import { ReactComponent as TwitterIcon } from '../img/twitter-social.svg'
 import { ReactComponent as LinkedInIcon } from '../img/linkedin-social.svg'
 import { ReactComponent as InstagramIcon } from '../img/instagram-social.svg'
-import { ReactComponent as TumblrIcon } from '../img/tumblr-social.svg'
 
 const Footer = props => {
     return (
@@ -47,7 +46,6 @@ const Footer = props => {
         </div>
     </footer>    
     )
-
 }
 
 export default Footer
