@@ -6,6 +6,7 @@ import { ReactComponent as FreeCodeCampIcon } from '../img/free-code-camp-social
 import { ReactComponent as CodePenIcon } from '../img/codepen-social.svg'
 import { ReactComponent as GitHubIcon } from '../img/github-social.svg'
 import { ReactComponent as TwitterIcon } from '../img/twitter-social.svg'
+import { ReactComponent as LinkedInIcon } from '../img/linkedin-social.svg'
 // Components
 import Home from '../pages/Home'
 import Projects from '../components/ProjectList'
@@ -13,19 +14,14 @@ import Project from '../components/Project'
 import Contact from '../pages/Contact'
 import Error404 from '../pages/404'
 import ScrollToTop from '../components/ScrollToTop'
+import Footer from '../components/Footer'
 // Utils
 import projectData from "../utils/projectData"
+import links from "../utils/links"
 
 const Navigation = () => {
 
-    const links = {
-        freeCodeCamp: 'https://www.freecodecamp.org/nomadfox',
-        codepen: 'https://codepen.io/nomadfox/',
-        github: 'https://github.com/lhuddlesto/',
-        twitter: 'https://twitter.com/1foxtrots',
-        instagram: 'https://www.instagram.com/nomadfox1/'
-    }
-
+    const apiRoute = "https://lhuddlesto-api.herokuapp.com"
     const [hamburgerMenu, setHamburgerMenu] = useState(false)    
 
     const handleHamburgerState = () => {
@@ -37,11 +33,6 @@ const Navigation = () => {
         }
         setHamburgerMenu(false)
         document.body.style.overflow = "visible"
-    }
-
-    const handleResume = () => {
-        console.log('clicked')
-        fetch('https://lhuddlesto-api.herokuapp.com')
     }
 
     if (hamburgerMenu === true) {
@@ -90,7 +81,7 @@ const Navigation = () => {
                     <MediaQuery minWidth={1000}>
                         <ul className="menu__list">
                             <li className="menu__list-item menu__list-about"><NavLink activeClassName="menu__link-selected" exact to='/' className="menu__link">Home</NavLink></li>
-                            <li className="menu__list-item menu__list-resume"><a className="menu__link" href="https://lhuddlesto-api.herokuapp.com">Resume</a></li>
+                            <li className="menu__list-item menu__list-resume"><a className="menu__link" href={apiRoute}>Resume</a></li>
                             <li className="menu__list-item menu__list-projects"><NavLink activeClassName="menu__link-selected" exact to='/projects' className="menu__link">Projects</NavLink></li>
                             <li className="menu__list-item menu__list-contact"><NavLink activeClassName="menu__link-selected" exact to='/contact' className="menu__link">Contact</NavLink></li>
                         </ul>           
@@ -99,10 +90,11 @@ const Navigation = () => {
                 <div className="menu__right">
                 <MediaQuery minWidth={1000}>
                     <ul className="menu__social">
-                        <li className="menu__social-item"><a className="menu__social-link" href={links.freeCodeCamp}><FreeCodeCampIcon /></a></li>
-                        <li className="menu__social-item"><a className="menu__social-link" href={links.codepen}> <CodePenIcon /></a></li>
-                        <li className="menu__social-item"><a className="menu__social-link" href={links.github}><GitHubIcon /></a></li>
-                        <li className="menu__social-item"><a className="menu__social-link" href={links.twitter}><TwitterIcon /></a></li>
+                        <li className="menu__social-item"><a className="menu__social-link" href={links.lance.freeCodeCamp}><FreeCodeCampIcon /></a></li>
+                        <li className="menu__social-item"><a className="menu__social-link" href={links.lance.codepen}> <CodePenIcon /></a></li>
+                        <li className="menu__social-item"><a className="menu__social-link" href={links.lance.linkedin}><LinkedInIcon /></a></li>
+                        <li className="menu__social-item"><a className="menu__social-link" href={links.lance.github}><GitHubIcon /></a></li>
+                        <li className="menu__social-item"><a className="menu__social-link" href={links.lance.twitter}><TwitterIcon /></a></li>
                     </ul>
                 </MediaQuery>
                     <MediaQuery maxWidth={1000}>
@@ -123,6 +115,16 @@ const Navigation = () => {
                 <Route path="/contact" component={Contact}/>               
                 <Route component={Error404}></Route>
             </Switch>
+            <Footer 
+            freeCodeCamp={links.lance.freeCodeCamp}
+            codepen={links.lance.codepen}
+            linkedin={links.lance.linkedin}
+            github={links.lance.github}
+            twitter={links.lance.twitter}
+            gabbyTwitter={links.gabby.twitter}
+            gabbyInstagram={links.gabby.instagram}
+            apiRoute={apiRoute}
+            />
             </ScrollToTop>
         </Router>
        

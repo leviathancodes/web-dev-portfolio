@@ -4,7 +4,7 @@ import About from '../components/About'
 
 const Home = () => {
     return (
-        <div class="wrapper"> 
+        <div className="wrapper"> 
             <Landing />
             <About />
       </div>

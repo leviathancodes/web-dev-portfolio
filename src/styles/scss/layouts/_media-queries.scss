@@ -80,6 +80,8 @@
     .aboutPortfolio {
         height: 100vh;
     }
+
+
 }
 
 @media screen and (max-width: 999px) {
@@ -95,6 +97,58 @@
     .homeContent__img {
         display: none;
         width: 1%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer {
+
+        &__gabby {
+            margin: 0;
+        }
+
+        &__lance {
+            margin: 0;
+        }
+        &__lance, &__gabby {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &-description {
+                margin: auto;
+                margin-top: 1rem;
+            }
+        }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__socials {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            margin-top: 1.5rem;
+        }
+
+        &__navigation {
+            &-item {
+                margin: 1rem;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 } 
 

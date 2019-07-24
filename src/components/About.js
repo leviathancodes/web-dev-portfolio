@@ -7,11 +7,11 @@ const About = () => {
         <div className="about" id="about">
             <div className="aboutContent">
                 <div className="aboutPortfolio">
-                    <Link className="aboutPortfolio__development" exact to='/projects'>
+                    <Link className="aboutPortfolio__development" exact='true' to='/projects'>
                             <h1 className="aboutPortfolio__development-text">Development</h1>
                     </Link>
 
-                    <Link className="aboutPortfolio__design" exact to='/projects'>
+                    <Link className="aboutPortfolio__design" exact='true' to='/projects'>
                         <h1 className="aboutPortfolio__design-text">Design</h1>
                     </Link>
                 </div>

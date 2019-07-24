@@ -16,6 +16,10 @@
         width: 70%;
     }
 
+    &__main-title {
+        text-shadow: 3px 3px rgba(49, 49, 49, 0.10)
+    }
+
     &__main-title, &__main-subtitle, &__main-body, &__contact {
         margin-left: 7rem;
     }
