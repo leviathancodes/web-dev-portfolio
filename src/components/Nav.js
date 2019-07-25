@@ -1,26 +1,17 @@
 import React, { useState } from "react"
 import MediaQuery from 'react-responsive'
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 // SVGS
 import { ReactComponent as FreeCodeCampIcon } from '../img/free-code-camp-social.svg'
 import { ReactComponent as CodePenIcon } from '../img/codepen-social.svg'
 import { ReactComponent as GitHubIcon } from '../img/github-social.svg'
 import { ReactComponent as TwitterIcon } from '../img/twitter-social.svg'
 import { ReactComponent as LinkedInIcon } from '../img/linkedin-social.svg'
-// Components
-import Home from '../pages/Home'
-import Projects from '../components/ProjectList'
-import Project from '../components/Project'
-import Contact from '../pages/Contact'
-import Error404 from '../pages/404'
-import ScrollToTop from '../components/ScrollToTop'
-import Footer from '../components/Footer'
+
 // Utils
-import projectData from "../utils/projectData"
 import links from "../utils/links"
 
-const Navigation = () => {
-
+const Nav = () => {
     const apiRoute = "https://lhuddlesto-api.herokuapp.com"
     const [hamburgerMenu, setHamburgerMenu] = useState(false)    
 
@@ -37,8 +28,6 @@ const Navigation = () => {
 
     if (hamburgerMenu === true) {
         return (
-            <Router>
-            <ScrollToTop>
                 <div className="mobileMenu">
                     <nav>
                         <img className="mobileMenu__exit" src={require('../img/exit-icon.svg')} alt="Exit ixon" onClick={handleHamburgerState}></img>
@@ -50,27 +39,10 @@ const Navigation = () => {
                         </ul>
                     </nav>
                 </div>
-
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/projects" exact component={Projects} />
-                    {projectData.map((project) => {
-                        const name = project.name.toLowerCase().replace(/\s/g, "-")
-                        return ( 
-                            <Route key={`/projects/${name}`} path={`/projects/${name}`} render={()=> <Project name={project.name} />}/>
-                        )
-                    })}
-                    <Route path="/contact" exact component={Contact} />
-                    <Route component={Error404}></Route>
-                </Switch>
-            </ScrollToTop>
-            </Router>
         )
     }
 
     return (
-        <Router>
-            <ScrollToTop>
             <nav className="menu">
                 <div className="menu__left">
                 <NavLink to="/"><img className="menu__icon" src={require("../img/lance-icon.png")} alt="Lance Huddleston II"></img></NavLink>
@@ -102,33 +74,7 @@ const Navigation = () => {
                     </MediaQuery>
                 </div>
             </nav>
-
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/projects" exact component={Projects} />
-                {projectData.map((project) => {
-                    const name = project.name.toLowerCase().replace(/\s/g, "-")
-                    return ( 
-                        <Route key={`/projects/${name}`} path={`/projects/${name}`} render={()=> <Project name={project.name} />}/>
-                    )
-                })}
-                <Route path="/contact" component={Contact}/>               
-                <Route component={Error404}></Route>
-            </Switch>
-            <Footer 
-            freeCodeCamp={links.lance.freeCodeCamp}
-            codepen={links.lance.codepen}
-            linkedin={links.lance.linkedin}
-            github={links.lance.github}
-            twitter={links.lance.twitter}
-            gabbyTwitter={links.gabby.twitter}
-            gabbyInstagram={links.gabby.instagram}
-            apiRoute={apiRoute}
-            />
-            </ScrollToTop>
-        </Router>
-       
     )
 }
 
-export default Navigation;
+export default Nav
