@@ -8,13 +8,33 @@ import Landing from '../components/Landing'
 
 describe('<Landing />', () => {
 
-    it('exists', () => {
+    it('home wrapper exists', () => {
         const componentToTest = <Landing/>;
 
         const wrapper = mount(<MemoryRouter>{componentToTest}</MemoryRouter>);
-        expect(wrapper).toExist
+        expect(wrapper.exists('.home')).toEqual(true)
     })
 
+    it('has an image element on desktop', () => {
+        const componentToTest = <Landing/>
+        const wrapper = mount(<MemoryRouter>{componentToTest}</MemoryRouter>);
+        const el = wrapper.find('img')
+
+        global.innerWidth = 2024
+        global.dispatchEvent(new Event('resize'));
+
+        expect(el).toBeTruthy()
+    })
+    // it('does not render the image on mobile', () => {
+    //     const componentToTest = <Landing/>
+    //     const wrapper = mount(<MemoryRouter>{componentToTest}</MemoryRouter>);
+    //     const el = wrapper.find('img')
+
+    //     global.innerWidth = 999
+    //     global.dispatchEvent(new Event('resize'));
+
+    //     expect(wrapper.find('img')).toBeUndefined()
+    // })
 })
 
 // it('renders without crashing', () => {
