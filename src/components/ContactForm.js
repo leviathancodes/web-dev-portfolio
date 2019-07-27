@@ -19,12 +19,11 @@ const ContactForm = ({ onSubmit }, props) => {
             event.preventDefault();
             const data = formState.values
     
-            const response = await axios.post('http://localhost:9000/email', data)
+            const response = await axios.post('https://lhuddlesto-api.herokuapp.com/email', data)
             setFormSent(true)
 
-
         }  catch (e) {
-            console.log(e)
+            return e
         }
 
     }
