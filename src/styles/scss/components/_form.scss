@@ -1,0 +1,84 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-right: 5rem;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #a9a9a9;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #a9a9a9;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #a9a9a9;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #a9a9a9;
+  }
+
+textarea {
+    resize: none;
+}
+
+input, select {
+    height: 5rem;
+}
+
+button {
+    @include reset-buttons;
+    @include button-styling(#ffffff, $color-primary, $color-primary-light);
+}
+
+input, textarea, select {
+    font: inherit;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid $color-primary-light-shade;
+    width: 95%;
+    margin-bottom: 5rem;
+}
+.default-select {
+    color: #a9a9a9;
+
+}
+select {
+    color: inherit;
+    border-radius: 0;
+}
+.form {
+    &__names {
+        width: 100%;
+        &-fname, &-lname {
+            width: 45%;
+            margin-right: 5%;
+        }
+
+    &__submit {
+        width: 25rem;
+        font-weight: 100;
+    }
+
+    }
+
+}
+
+textarea {
+    height: 8rem;
+}
+
+.form__submit {
+    margin-right: auto;
+    margin-left: auto;
+    width: 25rem;
+    transition: all .3s;
+    font-weight: 300;
+};
+
+select:invalid {
+    color: #a9a9a9;
+}
