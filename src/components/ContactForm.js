@@ -42,7 +42,7 @@ const ContactForm = ({ onSubmit }, props) => {
                     <option value="full time web dev">Full-Time Web Development Work</option>
                     <option value="web dev feature maintanence">Web-site Maintanence / Features</option>
                 </select>
-                <textarea {...textarea('message')} placeholder="Your message..." />
+                <textarea rows="50" cols="50" {...textarea('message')} placeholder="Your message..." />
                 <button className="form__submit">Submit</button>
             </form>
         )

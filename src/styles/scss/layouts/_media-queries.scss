@@ -15,11 +15,23 @@
     .aboutPortfolio {
         height: auto;
     }
+
+    .contact__grid {
+        height: 300vh;
+    }
+
+    textarea {
+        height: 20rem;
+    }
 }
 
 @media screen and (max-height: 600px) {
     .contact__grid {
-        height: 200vh;
+        height: 300vh;
+    }
+
+    textarea {
+        height: 20rem;
     }
 
 }
