@@ -1,6 +1,5 @@
 import React from "react"
 import ContactForm from "../components/ContactForm"
-import { ReactComponent as Wave } from '../img/desktop_wave.svg'
 
 const Contact = () => {
     return (
@@ -12,7 +11,6 @@ const Contact = () => {
                 </div>
                 <ContactForm />
             </div>
-            <Wave className="wave__desktop" />
         </div>
 
     )
