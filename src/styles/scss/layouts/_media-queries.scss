@@ -274,8 +274,20 @@ and (max-height: 568px) {
 
 
   @media screen and (max-height: 640px) and (max-width: 360px) {
+    form {
+        height: 100vh;
+    }
+
+    textarea {
+        height: 500px;
+        margin: auto;
+    }
     .contact {
         height: 700vh;
+    }
+
+    .form__submit {
+        margin-top: 8rem;
     }
 
     input::-webkit-input-placeholder { /* WebKit browsers */
