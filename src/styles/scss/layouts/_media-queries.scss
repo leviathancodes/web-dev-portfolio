@@ -273,9 +273,9 @@ and (max-height: 568px) {
   }
 
 
-  @media screen and (max-height: 500px) {
+  @media screen and (max-height: 640px ) and (max-width: 340px ) {
     .contact {
-        height: 500vh;
+        height: 400vh;
     }
 
   }
