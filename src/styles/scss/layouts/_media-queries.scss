@@ -273,9 +273,22 @@ and (max-height: 568px) {
   }
 
 
-  @media screen and (max-height: 640px ) and (max-width: 340px ) {
+  @media screen and (max-height: 640px) and (max-width: 360px) {
     .contact {
-        height: 400vh;
+        height: 700vh;
     }
+
+    input::-webkit-input-placeholder { /* WebKit browsers */
+        line-height: 1.5em;
+      }
+      input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        line-height: 1.5em;
+      }
+      input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        line-height: 1.5em;
+      }
+      input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        line-height: 1.5em;
+      }
 
   }
