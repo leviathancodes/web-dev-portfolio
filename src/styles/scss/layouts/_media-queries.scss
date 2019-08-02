@@ -271,3 +271,11 @@ and (max-height: 568px) {
         margin: 2rem;
     }
   }
+
+
+  @media screen and (max-height: 500px) {
+    .contact {
+        height: 250vh;
+    }
+
+  }
