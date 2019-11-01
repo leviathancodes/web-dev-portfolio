@@ -14,6 +14,7 @@ const Contact = () => {
                 <meta property="og:description" content="Get in contact with a web developer today. Lance Huddleston II can help you build web sites and web applications for your business.
                 With his experience, the job will get done and it'll be done well." />
                 <meta name="twitter:title" content="Contact A Web Developer - Let's build your website - Lance Huddleston II"/>
+                <link rel="canonical" href="https://lhuddlesto.com/contact"/>
             </Helmet>
             <div className="contact__grid">
                 <div className="contactIntro">
