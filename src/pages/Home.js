@@ -16,6 +16,7 @@ const Home = () => {
                 With his experience, the job will get done and it'll be done well." />
                 <meta property="og:image" content="https://lhuddlesto-api.herokuapp.com/img/openGraph_img.jpg" />
                 <meta name="twitter:title" content="Web Developer - Front-end/Back-end Services | Lance Huddleston II"/>
+                <meta name="twitter:card" content="summary_large_image"/>
                 <link rel="canonical" href="https://lhuddlesto.com"/>
             </Helmet>
 
