@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0",
+    "@sendgrid/mail": "^8.1.6",
     "axios": "^0.19.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^9.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
@@ -14,7 +14,7 @@
     "react-responsive": "^7.0.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-use-form-state": "^0.10.4"
   },
   "scripts": {
